@@ -12,3 +12,4 @@ class Config:
     STATIC_FOLDER = 'static'
     TEMPLATE_FOLDER = 'templates'
     HOST = os.environ.get('FLASK_HOST', '0.0.0.0')
+    API_KEY = os.environ.get('API_KEY')

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %} Transaction Data {% endblock %}
+
+{% block content %}
+
+<h1>Transaction Data</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Symbol</th>
+                <th>Token Address</th>
+                <th>Decimals</th>
+                <th>Token Name</th>
+                <th>Block Timestamp</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Type</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions.data %}
+                <tr>
+                    <td>{{ transaction.transaction_id }}</td>
+                    <td>{{ transaction.token_info.symbol }}</td>
+                    <td>{{ transaction.token_info.address }}</td>
+                    <td>{{ transaction.token_info.decimals }}</td>
+                    <td>{{ transaction.token_info.name }}</td>
+                    <td>{{ transaction.block_timestamp }}</td>
+                    <td>{{ transaction.from }}</td>
+                    <td>{{ transaction.to }}</td>
+                    <td>{{ transaction.type }}</td>
+                    <td>{{ transaction.value }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p><a href="{{ transactions.meta.links.next }}">Next Page</a></p>
+
+{% endblock %}
