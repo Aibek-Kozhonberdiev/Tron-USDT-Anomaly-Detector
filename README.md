@@ -1,7 +1,7 @@
 # Tron Transaction History README
 
 ## Overview
-This application allows users to obtain and analyze transaction history on the Tron network, with a special focus on the Tether (USDT) currency. Users can enter the Tron network address and the app will provide the validity of the transaction.
+This application allows users to obtain and analyze transaction history on the Tron network, with a special focus on the Tether (USDT) currency. 
 
 ## Prerequisites
 Before running the application, ensure you have the required dependencies installed. You can install them using the following command:
